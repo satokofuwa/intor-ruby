@@ -1,0 +1,20 @@
+def repeat_string(str)
+
+    if str.length<5
+         return str*3
+      else (repeat_string(str.slice(0,4)))
+    end
+end
+
+
+
+#値を入力
+repeat_string('python')
+repeat_string('GO')
+repeat_string('C++')
+
+#文字を表示させる
+
+puts repeat_string('python')
+puts repeat_string('GO')
+puts repeat_string('C++')
