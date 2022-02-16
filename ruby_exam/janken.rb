@@ -5,7 +5,7 @@ class Player
   def hand
    
     puts "数字を入力してください。"
-    puts "0:グー, 1:チョキ, 2:パー"
+    puts "0:グー\n1:チョキ\n2:パー\n"
      input_hand=gets.chomp
     
     # 「input_hand」が「0, 1, 2」のいずれかだと繰り返し処理を終了し、それ以外（アルファベットも含む）だと繰り返し処理を継続します。
@@ -14,7 +14,7 @@ class Player
               return input_hand
              else
               puts "0〜2の数字を入力してください"
-              puts "0:グー, 1:チョキ, 2:パー"
+              puts "0:グー\n1:チョキ\n2:パー\n"
              input_hand=gets.chomp
           end
         end
@@ -46,7 +46,7 @@ class Janken
     # Playerクラスの戻り値とEnemyクラスの戻り値からじゃんけんするロジックを作成します。
 
     i=(((player_hand.to_i)-(enemy_hand.to_i))+3)%3
-    puts i
+    # puts i
     if i==2 
         puts "あなたの勝ちです"
         return false
@@ -71,7 +71,7 @@ class GameStart
     # 変数「janken」にJankenをインスタンス化したものを代入します。
     janken = Janken.new
     
-    janken.pon(player.hand,enemy.hand)
+    # janken.pon(player.hand,enemy.hand)
 
     # 変数「next_game」に「true」を代入しましょう。
     # 「next_game」が「false」だと繰り返し処理を終了し、「true」だと繰り返し処理を継続します。
